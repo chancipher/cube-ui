@@ -1,5 +1,5 @@
 <template>
-  <div class="cube-textarea-wrapper" :class="{'cube-textarea_expanded': expanded, 'cube-textarea_active': isFocus}">
+  <div class="cube-textarea-wrapper" :class="{'cube-textarea_active': isFocus}" v-bind:style="expanded ? expandStyles : ''">
     <textarea
       ref="input"
       class="cube-textarea"
@@ -67,12 +67,21 @@
         type: [Boolean, Object],
         default: true
       },
+      expandHeight: {
+        type: Number,
+        default: 80
+      },
       autoExpand: {
         type: Boolean,
         default: false
       }
     },
     computed: {
+      expandStyles() {
+        return {
+          height: this.expandHeight + 'px !important'
+        }
+      },
       indicatorConf() {
         let indicator = this.indicator
         if (typeof indicator === 'boolean') {
@@ -133,8 +142,6 @@
       color: $textarea-placeholder-color
       text-overflow: ellipsis
     border-1px($textarea-border-color)
-  .cube-textarea_expanded
-    height: 80px
   .cube-textarea_active
     border-1px($textarea-focus-border-color)
   .cube-textarea-indicator
