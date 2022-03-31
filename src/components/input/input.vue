@@ -13,6 +13,7 @@
       :readonly="readonly"
       :autocomplete="autocomplete"
       :autofocus="autofocus"
+      :list="list"
       @focus="handleFocus"
       @blur="handleBlur"
       @change="changeHander"
@@ -65,6 +66,7 @@
       name: String,
       id: String,
       form: String,
+      list: String,
       minlength: Number,
       maxlength: Number,
       resize: String,
