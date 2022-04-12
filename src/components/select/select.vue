@@ -2,6 +2,9 @@
   <div class="cube-select" :class="{ 'cube-select_active': active, 'cube-select_disabled': disabled }" @click="showPicker">
     <span v-if="selectedText" class="cube-select-text">{{ selectedText }}</span>
     <span v-else class="cube-select-placeholder">{{ _placeholder }}</span>
+    <div class="cube-select-clear" v-if="_showClear" @click.stop="handleClear">
+      <i class="cubeic-wrong"></i>
+    </div>
     <i class="cube-select-icon"></i>
   </div>
 </template>
@@ -60,6 +63,10 @@
       }
     },
     computed: {
+      _showClear() {
+        let visible = this.value && !this.disabled
+        return visible
+      },
       adaptOptions() {
         return [this.options.map(item => {
           if (typeof item !== 'object') {
@@ -116,6 +123,9 @@
       this.autoPop && this.showPicker()
     },
     methods: {
+      handleClear(e) {
+        this.value = ''
+      },
       showPicker() {
         if (this.disabled) {
           return
@@ -173,4 +183,9 @@
     border-color: $select-icon-color transparent transparent transparent
     border-width: 4px 4px 0 4px
     transition: transform .3s ease-in-out
+  .cube-select-clear
+    position: absolute
+    right: 24px
+    top: 50%
+    transform: translate(0, -50%)
 </style>
