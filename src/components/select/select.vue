@@ -185,7 +185,16 @@
     transition: transform .3s ease-in-out
   .cube-select-clear
     position: absolute
-    right: 24px
+    right: 14px
     top: 50%
     transform: translate(0, -50%)
+    width: 1em
+    height: 1em
+    line-height: 1
+    padding: 10px
+    box-sizing: content-box
+    color: $input-clear-icon-color
+    > i
+      display: inline-block
+      transform: scale(1.2)
 </style>
