@@ -124,7 +124,7 @@
     },
     methods: {
       handleClear(e) {
-        this.value = ''
+        this.$emit(EVENT_INPUT, '')
       },
       showPicker() {
         if (this.disabled) {
