@@ -37,6 +37,7 @@
         }
       },
       value: null,
+      emptyValue: 0,
       placeholder: {
         type: String,
         default: ''
@@ -124,7 +125,7 @@
     },
     methods: {
       handleClear(e) {
-        this.$emit(EVENT_INPUT, '')
+        this.$emit(EVENT_INPUT, this.emptyValue)
       },
       showPicker() {
         if (this.disabled) {
