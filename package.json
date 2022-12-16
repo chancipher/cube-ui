@@ -38,7 +38,6 @@
     "types"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
