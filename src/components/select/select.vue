@@ -37,7 +37,7 @@
         }
       },
       value: null,
-      emptyValue: 0,
+      emptyValue: null,
       placeholder: {
         type: String,
         default: ''
@@ -49,6 +49,10 @@
       disabled: {
         type: Boolean,
         default: false
+      },
+      clearable: {
+        type: [Boolean, Object],
+        default: true
       },
       title: {
         type: String,
@@ -65,7 +69,7 @@
     },
     computed: {
       _showClear() {
-        let visible = this.value && !this.disabled
+        let visible = this.value && !this.disabled && this.clearable
         return visible
       },
       adaptOptions() {
