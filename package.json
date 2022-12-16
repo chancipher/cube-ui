@@ -38,6 +38,7 @@
     "types"
   ],
   "publishConfig": {
+    "registry": "https://nexus.perlaedu.com"
   },
   "repository": {
     "type": "git",
