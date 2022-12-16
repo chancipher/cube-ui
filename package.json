@@ -43,7 +43,7 @@
     "attributes": "vetur/attributes.json"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://nexus.perlaedu.com/repository/perlaedu-npm/"
   },
   "repository": {
     "type": "git",
