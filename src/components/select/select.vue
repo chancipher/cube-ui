@@ -1,6 +1,6 @@
 <template>
   <div class="cube-select" :class="{ 'cube-select_active': active, 'cube-select_disabled': disabled }" @click="showPicker">
-    <span v-if="selectedText" class="cube-select-text">{{ selectedText }}</span>
+    <span v-if="selectedText" class="cube-select-text" v-html="selectedText"></span>
     <span v-else class="cube-select-placeholder">{{ _placeholder }}</span>
     <div class="cube-select-clear" v-if="_showClear" @click.stop="handleClear">
       <i class="cubeic-wrong"></i>
