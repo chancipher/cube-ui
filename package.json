@@ -38,7 +38,6 @@
     "types",
     "vetur"
   ],
-<<<<<<< HEAD
   "vetur": {
     "tags": "vetur/tags.json",
     "attributes": "vetur/attributes.json"
@@ -46,8 +45,6 @@
   "publishConfig": {
     "registry": "https://nexus.perlaedu.com/repository/perlaedu-npm/"
   },
-=======
->>>>>>> 47f374d6d87d30ea2488176923c2910fde76c218
   "repository": {
     "type": "git",
     "url": "git@github.com:didi/cube-ui.git"
