@@ -3,7 +3,7 @@
     <div class="cube-popup-mask" @touchmove.prevent @click="maskClick">
       <slot name="mask"></slot>
     </div>
-    <div class="cube-popup-container" :class="containerClass">
+    <div class="cube-popup-container" @touchmove.prevent :class="containerClass">
       <div class="cube-popup-content" v-if="$slots.default">
         <slot></slot>
       </div>
