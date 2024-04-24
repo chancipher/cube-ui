@@ -1,6 +1,6 @@
 <template>
   <div class="cube-popup" :style="{'z-index': zIndex}" :class="rootClass" v-show="isVisible">
-    <div class="cube-popup-mask" @touchmove.prevent @click="maskClick">
+    <div class="cube-popup-mask" @click="maskClick">
       <slot name="mask"></slot>
     </div>
     <div class="cube-popup-container" :class="containerClass">
